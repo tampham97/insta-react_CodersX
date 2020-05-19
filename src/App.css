@@ -1,38 +1,171 @@
-.App {
-  text-align: center;
+.ant-layout-header {
+  background: #FFFFFF;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  height: 64px;
+  padding: 0 200px;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 64px;
+}
+.header-search{
+  width: 220px;
+}
+.header-search:hover,.header-search:focus{
+  border: 1px solid #d9d9d9;
+  outline: none;
+  box-shadow: none;
+}
+.header-right{
+  padding: 0 10px;
+}
+.header-right-item{
+  margin: 0 10px;
+  font-size: 22px;
+}
+.content{
+  background-color: rgba(var(--b3f,250,250,250),1);
+  padding: 30px 200px;
+}
+
+/* Suggest Friends */
+a{
+  text-decoration: none;
+}
+.recommend-container{
+  box-sizing: border-box;
+  padding:0 15px;
+}
+.recommend-header{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  margin: 15px 0;
+}
+.recommend-header span{
+  color: #999;
+  font-weight: bold;
+}
+.recommend-header a{
+  color: #262626;
+  font-size:12px;
+  font-weight: 500;
+}
+.recommend-container .info, .heading{
+  display:flex;
+  align-items:center;
+  margin-bottom: 7px;
+}
+.profile{
+  padding:0 15px;
+  display: flex;
   align-items: center;
+}
+.profile .avatar{
+  width: 60px;
+  height: 60px;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.avatar{
+  background-size: cover;
+  background-position: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right:10px;
+  border: 1px solid #d9d9d9;
+}
+.recommend-container .name, .profile .name, .heading .name{
+  display:flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-grow:1;
+  text-align:left;
+}
+.recommend-container .name span,.profile .name span,.heading .name,.name-people{
+  color: #262626;
+  font-size: 14px;
+  font-weight: 600;
+}
+.recommend-container .name .desc, .profile .name .desc,.heading .name .location{
+  color: #999;
+  font-size: 12px;
+  font-weight: 500;
+}
+.heading .name .location, .caption{
+  color: #262626;
+  font-weight: 400;
+}
+.recommend-container .follow{
+  font-size: 12px;
+  color:#1876F2;
 }
 
-.App-link {
-  color: #61dafb;
+/* Acticle */
+.acticle{
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  background: #FFFFFF;
+  margin-right: 30px;
+  margin-bottom: 60px;
+  /* width: 614px; */
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.heading{
+  padding: 16px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 0;
+}
+.acticle .image{
+  width: 100%;
+  height: 614px;
+}
+.icon-react{
+  padding-bottom: 8px;
+}
+.icon-react-item{
+  margin-right: 10px;
+  font-size: 24px;
+}
+.float-right{
+  float: right;
+  margin-right: 0px;
+  margin-left: 10px;
+}
+.interaction{
+  padding: 8px 16px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.likes-number{
+  margin-bottom: 8px;
+}
+.status,.comment-item{
+  display: flex;
+}
+.name-people{
+  margin-right: 7px;
+}
+.post-comment{
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.post-comment input{
+  border: none;
+  flex-grow: 1;
+  outline: none;
+  font-size: 14px;
+  color: #262626;
+  font-weight: 500;
+}
+.post-comment button{
+  background: #FFFFFF;
+  border: none;
+  color: #1876F2;
+  font-weight: 500;
+  cursor: pointer;
 }
