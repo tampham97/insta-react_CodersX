@@ -1,38 +1,27 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
-import Menu from './components/Header/Menu'
+import Home from './pages/Home';
 import 'antd/dist/antd.css';
 import './App.css';
-import { Row, Col } from 'antd';
-import SuggestFriendList from './components/SuggestFriend/SuggestFriendList';
-import Acticle from './components/Acticle/Acticle';
+import Account from './pages/Account';
+
 
 
 function App() {
   return (
-    <React.Fragment>
-      <Menu />
-      <div className='content'>
-        <Row>
-          <Col sm={16}>
-            <Acticle/>
-            <Acticle/>
-            <Acticle/>
-          </Col>
-          <Col sm={8}>
-            <div className='profile'>
-              <img className='avatar' src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSpieEIm8fvpLUTwVQOxfEZcnTOPh5M5UNPoFFeWSpQgUPlh4-3&usqp=CAU' alt='...' />
-              <div className="name">
-                <span >taam_pham</span>
-                <span className="desc" >Tam Pham</span>
-              </div>
-            </div>
-            <SuggestFriendList />
-          </Col>
-        </Row>
-      </div>
-    </React.Fragment>
-
+    <Router>
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/account/password' component={Account} />
+          <Route path='/account/login' component={Account} />
+          <Route path='/account/signup' component={Account} />
+        </Switch>
+    </Router>
 
   );
 }
