@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 
-import { CommentOutlined, ShareAltOutlined, HeartOutlined, BookOutlined } from '@ant-design/icons';
+import { CommentOutlined, ShareAltOutlined, HeartOutlined, BookOutlined,HeartFilled } from '@ant-design/icons';
 
 
 export default class Interaction extends Component {
     render() {
+        const {onClickLikeBtn,liked} = this.props;
         return (
             <React.Fragment>
                 <div className='interaction'>
                     <div className="icon-react">
-                        <HeartOutlined className="icon-react-item" />
+                        <span className="icon-react-item" onClick={onClickLikeBtn}>
+                            { !liked ? <HeartOutlined /> : <HeartFilled style={{color:"#ff4d4f"}} />}
+                        </span>
                         <CommentOutlined className="icon-react-item" />
                         <ShareAltOutlined className="icon-react-item" />
                         <BookOutlined className="icon-react-item float-right" />

@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 
 
-import { Input } from 'antd';
-import { SearchOutlined,HomeOutlined,HeartOutlined,MessageOutlined,CompassOutlined } from '@ant-design/icons';
+import { Input, Badge ,Avatar} from 'antd';
+import { SearchOutlined, HomeOutlined, HeartOutlined, MessageOutlined, CompassOutlined } from '@ant-design/icons';
 
 
 export default class Menu extends Component {
+    
     render() {
         return (
             <div className='header'>
@@ -14,13 +15,16 @@ export default class Menu extends Component {
                         className="logo-img" alt="" />
                 </a>
                 <div >
-                    <Input className='header-search'  type='search' placeholder="Search" prefix={<SearchOutlined />} />
+                    <Input className='header-search' type='search' placeholder="Search" prefix={<SearchOutlined />} />
                 </div>
                 <div className='header-right'>
-                    <HomeOutlined  className='header-right-item'/>
+                    <HomeOutlined className='header-right-item' />
                     <MessageOutlined className='header-right-item' />
                     <CompassOutlined className='header-right-item' />
-                    <HeartOutlined className='header-right-item'/>
+                    <Badge count={5}>
+                        <HeartOutlined className='header-right-item head-example' />
+                    </Badge>
+                    <Avatar className='header-right-item' size={25}  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSpieEIm8fvpLUTwVQOxfEZcnTOPh5M5UNPoFFeWSpQgUPlh4-3&usqp=CAU" />
                 </div>
             </div>
         )
